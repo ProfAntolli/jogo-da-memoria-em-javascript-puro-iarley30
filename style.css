@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #202020;
+  color: white;
+  text-align: center;
+}
+.memory-game {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin-top: 50px;
+}
+.memory-card {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+.memory-card img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.front-face {
+  transform: rotateY(180deg);
+}
